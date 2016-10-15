@@ -21,11 +21,10 @@ def step2(url, value, next_op):
     
 def main():
     print("What is your DNI (Do not put your last letter)")
-    dni = "70360133" #input()
+    dni = input()
     main_url = MAIN_URL.format(dni=dni)
     stp1_value, stp1_next_op = step1(main_url)
     step2(main_url, stp1_value, stp1_next_op)
     
 if __name__ == "__main__":
     main()
-main()
