@@ -30,7 +30,7 @@ def main():
     main_url = MAIN_URL.format(dni=dni)
     op1, op2_endpoint = step1(main_url)
     op2, operator_endpoint = step2(main_url, op2_endpoint)
-    operator, next_endpoint = step3(main_url, operator_endpoint)
+    operator, next_endpoint, uri = step3(main_url, operator_endpoint)
     
 if __name__ == "__main__":
     main()
