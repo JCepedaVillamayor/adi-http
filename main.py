@@ -8,7 +8,7 @@ def main():
     dni = input()
     main_url = MAIN_URL.format(dni=dni)
     endpoint = make_step1(main_url)
-    make_step2(main_url, endpoint)
+    make_step2(main_url, endpoint, dni)
     
 if __name__ == "__main__":
     main()
