@@ -1,6 +1,5 @@
 from step_1 import make_step1
 from step_2 import make_step2
-from network_utilities import *
 
 MAIN_URL = "http://httptask-142719.appspot.com/{dni}"
 

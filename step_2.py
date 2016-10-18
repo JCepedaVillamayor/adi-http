@@ -19,5 +19,5 @@ def make_step2(main_url, endpoint):
     check_dni_uri, dni_uri , dni = get_dni_endpoint(main_url, endpoint)
     status_code = post_dni(main_url, dni_uri, dni)
     if status_code != 200:
-        print("Exiting. Step 1 failed")
+        print("Exiting. Step 2 failed")
     check_dni(main_url, check_dni_uri)
