@@ -12,7 +12,7 @@ def post_dni(main_url, dni_uri, dni):
 
 def check_dni(main_url, check_dni_uri):
     result_url = main_url + check_dni_uri
-    get_request(result_url)
+    return get_request(result_url, 'next')
     
 def make_step2(main_url, endpoint, dni):
     print("\n\n/////////\nSTEP 2\n/////////")
@@ -20,4 +20,4 @@ def make_step2(main_url, endpoint, dni):
     status_code = post_dni(main_url, dni_uri, dni)
     if status_code != 200:
         print("Exiting. Step 2 failed")
-    check_dni(main_url, check_dni_uri)
+    return check_dni(main_url, check_dni_uri)
