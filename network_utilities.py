@@ -15,3 +15,8 @@ def get_request(url, *args):
     req = requests.get(url)
     print("JSON: \n{}\nStatus code: {}".format(req.json(), req.status_code))
     return [req.json()[val] for val in args]
+
+def delete_request(url):
+    req = requests.delete(url)
+    print("JSON: \n{}\nStatus code: {}".format(req.json(), req.status_code))
+    
