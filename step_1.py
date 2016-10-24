@@ -19,6 +19,10 @@ def send_result(main_url, result_uri, result):
     headers = {"Content-Type": "application/json"}
     return post_request(result_url, json_info, headers)
 
+def get_dni_value(main_url, endpoint):
+    result_url = main_url + endpoint
+    get_request(result_url)
+    
 def calc_result(op1, op2, operator):
     op1 = int(op1)
     op2 = int(op2)
@@ -43,4 +47,5 @@ def make_step1(main_url):
     if status_code != 201:
         print("Exiting. Step 1 failed")
         exit(0)
+    get_dni_value(main_url, result_uri)
     return step2_endpoint

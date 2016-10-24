@@ -8,7 +8,6 @@ def post_request(url, json_content={}, headers={}):
 
 def put_request(url, json_content={}, headers={}):
     req = requests.put(url, headers=headers, json=json_content)
-    print(req.text)
     print("JSON: \n{}\nStatus code: {}".format(req.json(), req.status_code))
     return req.status_code
 
