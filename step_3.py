@@ -18,4 +18,7 @@ def make_step3(main_url, endpoint):
     print("\n\n/////////\nSTEP 3\n/////////")
     uri, value, next_uri = check_next_steps_to_procced(main_url, endpoint)
     remove_element(main_url, uri, value)
-    return check_removed_element(main_url, next_uri)
+    step4 = check_removed_element(main_url, next_uri)[0]
+    get_request(main_url + uri)
+    return step4
+    
